@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe Print', sans-serif;
+    font-family: 'Courier New', monospace;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
@@ -21,15 +21,16 @@ body {
     display: block;
     position: absolute;
     table-layout: auto;
-    top: 0px;
+    top: 60px;
     left: 0px;
     
 }
 
 .logo {
-    width: 550px; /* Adjust as needed */
+    width: 460px;
     height: auto;
     margin-bottom: 20px;
+    margin-top: 30px;
     opacity: 0.8; 
     transition: opacity 0.3s ease;
     position: absolute;
@@ -37,38 +38,70 @@ body {
     
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+
+nav {
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
 
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: inline; 
+    gap: 15px; 
+}
+
+
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    margin: 0;
 }
 
 nav ul li a {
-    color: black;
+    display: inline-block;
+    color: white;
+    background-image: linear-gradient(135deg, #923cb5 0%, #00009f 50%, #1c7efb 100%);
+    padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 22px;
-    background-image: linear-gradient(to right, indigo, blue, orange, rgb(128, 51, 51));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
+    font-size: 18px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    position: relative;
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
 }
+
+nav ul li a.active {
+    background-image: linear-gradient(135deg, #ff5f6d 0%, #ffc371 100%);
+    color: #fff;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    nav {
+        top: 10px;
+        left: 10px;
+    }
+
+    nav ul li a {
+        font-size: 16px; 
+        padding: 8px 16px; 
+    }
+}
+
 
 section {
     padding: 40px 20px;
     text-align: center;
 }
 h1 {
-    font-size: 66px;
+    font-size: 88px;
     font-weight: bold;
     background-image: linear-gradient(to right, indigo, blue, orange, red);
     background-clip: text;
@@ -85,15 +118,31 @@ h2 {
 
 .h33 {
     display: grid;
-  grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto;
+    align-items: center;
 }
+
+h3{
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px ;
+}
+
+.par {
+    align-items: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    text-align: justify;
+}
+
 .about-us {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns for text and media */
-    gap: 20px; /* Space between columns */
+    grid-template-columns: 1fr;
+    gap: 20px; 
     padding: 40px;
-    background-color: #f9f9f9; /* Light background color */
-    color: #333; /* Text color */
+    background-color: #f9f9f9; 
+    color: #333; 
+    align-content: center;
 }
 
 .about-content {
@@ -101,152 +150,127 @@ h2 {
     flex-direction: column;
 }
 
-.about-content h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-.about-content h3 {
-    font-size: 24px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-}
-
-.about-content p {
-    line-height: 1.6; /* Better readability */
-    margin-bottom: 15px;
-}
 
 .about-media {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Responsive grid */
-    gap: 10px; /* Space between images */
+    display: contents;
 }
 
 .about-media img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners for images */
-    transition: transform 0.3s; /* Animation on hover */
+    width: 100%; 
+    height: 500px; 
 }
 
-.about-media img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .about-us {
-        grid-template-columns: 1fr; /* Stack on small screens */
-    }
-}
-
-
-
-/* Container to hold the gallery */
 .gallery-container {
     position: relative;
-    max-width: 1000px; /* Adjust the width as needed */
+    max-width: 1000px; 
     margin: auto;
     overflow: hidden;
 }
 
-/* Gallery grid layout */
+
 .gallery {
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Individual gallery items */
 .gallery-item {
-    width: 25%; /* Four images per row, so each takes up 25% */
+    width: 25%; 
     opacity: 0.9;
     transition: opacity 0.3s ease;
     cursor: pointer;
+    padding: 10px;
+    height: 260px;
+  
 }
 
 .gallery-item:hover {
-    opacity: 1; /* Fully opaque on hover */
+    opacity: 1; 
+    transform: scale(1.1); 
+
 }
 
-/* Navigation buttons */
 .prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.6em 2em;
     border: none;
-    user-select: none;
-    transition: background-color 0.3s ease;
-    z-index: 10; /* Ensure buttons stay above the gallery */
-}
-
-.next {
-    right: 0;
-}
-
-.prev {
-    left: 0;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-.art-item {
-    margin: 15px;
-    text-align: center;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.art-item:hover {
-    transform: scale(1.05);
-}
-
-.art-item img {
-    width: 100%;
-    max-width: 250px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    overflow: hidden; 
+    transition: background 0.3s ease-in-out; 
+  }
+  
+  .prev:before, .next:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: prev next 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes .prev .next {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .prev:after, .next:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+  
+ 
+  .prev {
+    margin-right: 10px; 
+  }
+  
+  .next {
+    margin-left: 10px; 
+  }
+  
+  .prev:hover, .next:hover {
+    background: #333; 
+  }
 
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    height: auto;
-    border: 5px solid #ff6b6b;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-}
 
 footer {
     text-align: center;
@@ -258,11 +282,13 @@ footer {
     width: 100%;
 }
 
-/* Media Queries for Responsive Design */
 @media (max-width: 768px) {
     nav ul li {
         display: block;
         margin: 10px 0;
+    }
+    .about-us {
+            grid-template-columns: 1fr; 
     }
     
     .gallery-container {
@@ -270,22 +296,17 @@ footer {
         align-items: center;
     }
     
-
-    .art-item {
-        margin: 10px 0;
-    }
-
-    
-    .art-item img {
-        max-width: 90%;
-    }
-
     .logo, .header-image {
         width: 120px;
     }
 
     .gallery-item {
-        width: 33.33%; /* Show three images per row on tablets */
+        width: 33.33%; 
+    }
+
+    .contact {
+        direction: column;
+        width: fit-content;
     }
 
     footer {
@@ -306,12 +327,22 @@ footer {
         font-size: 22px;
     }
 
-    .logo, .header-image {
-        width: 80px;
+    .logo {
+        width: 50%;
+        float: right;
+    }
+
+    .header-image {
+        width: 50%;
     }
 
     .gallery-item {
-        width: 50%; /* Show two images per row on mobile */
+        width: 50%; 
+    }
+
+    .gallery-container {
+        flex-direction: column;
+        align-items: center;
     }
 
     footer {
