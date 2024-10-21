@@ -12,44 +12,99 @@
         <div class="logo-container">
             <img src="logo3.png" alt="Logo" class="logo">
         </div>
+
+        <div class="burger-menu" onclick="toggleMenu()">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+
         <nav>
             <ul id="nav-bar">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#home" class="nav-button" onclick="changePage('home')">Home</a></li>
+                <li><a href="#about-us" class="nav-button" onclick="changePage('about-us')">Our Artists</a></li>
+                <li><a href="#gallery" class="nav-button" onclick="changePage('gallery')">Gallery</a></li>
+                <li><a href="#contact" class="nav-button" onclick="changePage('contact')">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="about-us">
-        <div class="about-content">
-            <h2>About Us</h2>
-            <p class="aboutabout">At <strong>ART STUDIO</strong>, we believe that art is more than just a visual experience—it's a reflection of creativity, emotion, and the human spirit. Our platform is dedicated to celebrating artists from all backgrounds by sharing their unique works with a global audience.</p>
+    <div id="home" class="page-section active-section">
+        <h2>Welcome to Our Art Studio</h2>
+        <p class="p1">It is a place where creativity and inspiration come to life! But what is ART ? Let's find out first!</p>
             
-            <div class="h33">
-            <h3>Celebrating Creativity</h3>
-            <p class="par">Our passion lies in showcasing art that inspires, provokes thought, and tells a story. We are committed to providing a space where artists can express themselves freely, and art lovers can discover pieces that resonate with them. From paintings and digital art to sculptures and mixed media, we feature a diverse range of artistic styles.</p>
-            
-            <h3>Discover and Purchase Art</h3>
-            <p class="par">Art is meant to be experienced and shared. That's why every artwork featured on our platform is available for purchase. We strive to make it easy for collectors and enthusiasts to find the perfect piece that speaks to their taste and enriches their lives.</p>
-            
-            <h3>Artists, Join Our Community</h3>
-            <p class="par">Are you an artist looking to showcase your work to a broader audience? We would love to hear from you! <strong>ART STUDIO</strong> is always on the lookout for new talent.</p>
-            
-            <h3>Our Commitment</h3>
-            <p class="par">We are dedicated to supporting the art community by giving artists a voice and helping their work reach those who truly appreciate it.</p>
+        <div class="video-container">
+            <iframe 
+            width="780" 
+            height="400" 
+            src="https://www.youtube.com/embed/QZQyV9BB50E" 
+            title="What is Art?" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
         </div>
-        </div>
-       
-    </section>
-    
-    <bv>
-        <div class="about-media">
-            <img src="postpic2.png" alt="Artwork 1">
-        </div>
-    </bv>
 
-    <section id="gallery">
+            <div class="discover">
+            <h3 class="discover2">Discover the Beauty of Art</h3>
+            <p class="discover3">Whether you're an artist looking to share your work or an art lover seeking a masterpiece to admire, you've come to the right place. Our studio is dedicated to showcasing diverse artistic styles and mediums, from contemporary paintings and digital illustrations to sculptures and mixed media. We believe that art should be accessible to everyone, and our doors are always open to new ideas and creative minds.</p>
+  
+            <h3 class="discover2">Join Our Creative Journey</h3>
+            <p class="discover3">At Art Studio, we celebrate the beauty of individuality and the unique perspectives that each artist brings. We invite you to explore our gallery, learn about the artists behind the works. Whether you're a seasoned professional or a curious beginner, there's a place for you here.</p>
+          
+            <h3 class="discover2">Bring Art into Your Life</h3>
+            <p class="discover3">Art has the power to transform spaces and touch lives. If you find a piece that speaks to you, it's more than just an artwork—it's a connection to the soul of the artist and a story waiting to be told. All the works displayed in our gallery are available for purchase, making it easy for you to bring creativity into your home or office.</p>
+          
+            <h3 class="discover2">Connect with Us</h3>
+           <p class="discover3">We’re always excited to meet fellow art enthusiasts and creators. Feel free to reach out if you're interested in showcasing your work, learning new techniques, purchasing an artwork, or simply connecting with other like-minded individuals. Let’s turn inspiration into action and creativity into masterpieces together!</p>
+          </div>
+
+             <p class="thankyou">Thank you for visiting Art Studio. We hope you enjoy your time exploring our creative space!</p>
+                    
+            <img src="images1.jpeg" class="discoverimage" alt="discoverimage1" height="300px">
+          
+            </div>
+
+    <section id="about-us" class="page-section">
+        <div class="about-content">
+            <h2>Our Artists</h2>
+            <p class="aboutabout">At <strong>ART STUDIO</strong>, we believe that art is more than just a visual experience—it's a reflection of creativity, emotion, and the human spirit. Our platform is dedicated to celebrating artists from all backgrounds by sharing their unique works with a global audience. Meet our Artists and explore their works!</p>
+            
+            <div class="artistgrid">
+                <img class="artistimage" src="artist_sofia.jpg" height="290px" width="370px">
+                <p class="par">
+                <strong>Sofia DeLuna</strong><br></br>
+                <strong>Style:</strong><br>Abstract Expressionism.</br>
+                <strong>Background:</strong><br>Sofia DeLuna, a self-taught artist from Buenos Aires, Argentina, began her journey with art at a young age. Her bold use of color and texture is a reflection of her passion for expressing emotions without boundaries. Influenced by the vibrant culture of her hometown, Sofia's work often features swirling shapes and dramatic contrasts that convey movement and depth. She believes in the power of art to communicate what words cannot, and her pieces invite viewers to explore their own interpretations.</br>
+                <strong>Inspiration:</strong><br>Sofia finds inspiration in the chaos and beauty of city life, the rhythms of nature, and the ever-changing landscape of human emotions. Her favorite medium is acrylic on canvas, which she manipulates to create multi-layered compositions that feel both chaotic and harmonious.</br></p>
+          
+                <img class="artistimage" src="artist_liam.jpg" height="290px" width="370px">
+                <p class="par">
+                <strong>Liam Hargrove</strong><br></br>
+                <strong>Style:</strong><br>Realism & Portraiture.</br>
+                <strong>Background:</strong><br>Originally from Edinburgh, Scotland, Liam Hargrove has spent the last decade perfecting his skills in realistic portraiture. With a background in fine arts, Liam's detailed brushwork captures the subtleties of human expressions, making each of his portraits a story in itself. His ability to bring out the personality of his subjects through his work has earned him recognition in numerous art exhibitions across Europe.</br>
+                <strong>Inspiration:</strong><br>Liam's primary inspiration comes from the everyday faces and stories of people he encounters. His paintings are a tribute to the hidden emotions and quiet moments that make each individual unique. He predominantly works with oil paints, allowing him to create lifelike textures and a sense of depth that draws viewers in.</br></p>
+          
+                <img class="artistimage" src="artist_aria.jpeg" height="290px" width="370px">
+                <p class="par">
+                <strong>Aria Chen</strong><br></br>
+                <strong>Style:</strong><br>Digital Art & Fantasy Illustration.</br>
+                <strong>Background:</strong><br>Aria Chen is a digital artist based in San Francisco, California. With a degree in graphic design and animation, Aria's art blurs the line between reality and fantasy. Her digital illustrations often depict surreal landscapes, mythical creatures, and dreamlike scenes that transport viewers to another world. Aria's work has been featured in several gaming and animation projects, where her imagination takes center stage.</br>
+                <strong>Inspiration:</strong><br>Aria's artistic vision is fueled by her love of science fiction, folklore, and fantasy literature. She draws inspiration from nature, astronomy, and her fascination with storytelling. Working primarily with digital tools, Aria blends her technical skills with her creative spirit to produce mesmerizing artworks that captivate the imagination.</br></p>
+                
+                <img class="artistimage" src="artist_marco.jpg" height="290px" width="370px">
+                <p class="par">
+                <strong>Marco Santorini</strong><br></br>
+                <strong>Style:</strong><br>Contemporary Sculpture.</br>
+                <strong>Background:</strong><br>Marco Santorini, originally from Florence, Italy, is a sculptor who specializes in contemporary and conceptual pieces. His work is characterized by bold, geometric shapes and the innovative use of materials like metal, wood, and recycled objects. Marco's sculptures explore themes of human connection, transformation, and the relationship between nature and technology. His pieces have been featured in several public art installations and galleries across Europe.</br>
+                <strong>Inspiration:</strong><br>Marco's inspiration comes from modern architecture, urban landscapes, and the fusion of organic and industrial elements. He believes that every object has the potential to become a work of art and that even the most ordinary materials can be transformed into something extraordinary. Marco's creations invite viewers to engage with his work from multiple perspectives, exploring the balance between chaos and order.</br></p>
+        </div>
+        </div>
+  
+    </section>
+
+
+    <section id="gallery" class="page-section">
         <h2>Gallery</h2>
         <div class="gallery-container">
             <div class="gallery" >
@@ -61,24 +116,98 @@
                 <img src="pic6.jpg" alt="Image 6" class="gallery-item">
                 <img src="pic7.jpg" alt="Image 7" class="gallery-item">
                 <img src="pic8.jpg" alt="Image 8" class="gallery-item">
+                <img src="pic9.jpeg" alt="Image 9" class="gallery-item">
+                <img src="pic10.jpg" alt="Image 10" class="gallery-item">
+                <img src="pic11.jpg" alt="Image 11" class="gallery-item">
+                <img src="pic12.jpg" alt="Image 12" class="gallery-item">
+                <img src="pic13.jpg" alt="Image 13" class="gallery-item">
+                <img src="pic14.webp" alt="Image 14" class="gallery-item">
+                <img src="pic15.jpg" alt="Image 15" class="gallery-item">
+                <img src="pic16.avif" alt="Image 16" class="gallery-item">
+                <img src="pic17.jpg" alt="Image 17" class="gallery-item">
+                <img src="pic18.avif" alt="Image 18" class="gallery-item">
+                <img src="pic19.avif" alt="Image 19" class="gallery-item">
+                <img src="pic20.avif" alt="Image 20" class="gallery-item">
+                <img src="pic21.jpeg" alt="Image 21" class="gallery-item">
             </div>
+
+            <div class="button-container">
             <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
             <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+
+            <div id="imageModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="modalImage">
+            </div>
+
         </div>
 
     </section>
 
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" required ></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <section id="contact" class="page-section">
+
+
+        <div class="contact_us">
+            <div class="responsive-container-block bigContainer">
+              <div class="responsive-container-block Container">
+                <div class="responsive-cell-block wk-desk-5 wk-ipadp-4 wk-tab-12 wk-mobile-12">
+                  <img class="mainImg" src="https://workik-widget-assets.s3.amazonaws.com/widget-assets/images/mp35.svg">
+                </div>
+                <div class="responsive-cell-block wk-desk-7 wk-ipadp-8 wk-tab-12 wk-mobile-12">
+                  <p class="text-blk heading">
+                    Contact Me
+                  </p>
+                  <form class="formTable" id="izml">
+                    <div class="firstRow">
+                      <div class="fullNameArea">
+                        <p class="cardHead">
+                          Full Name
+                        </p>
+                        <input class="fullName" id="fullName" name="fullName" type="text">
+                      </div>
+                      <div class="emailArea">
+                        <p class="cardHead">
+                          Email Address
+                        </p>
+                        <input class="email" id="email" name="email" type="text">
+                      </div>
+                    </div>
+                    <div class="messageArea">
+                      <p class="cardHead">
+                        Message
+                      </p>
+                      <textarea class="message" cols="30" id="message" name="message" rows="10"></textarea>
+                    </div>
+                    <a class="submit" href="#" id="w-c-s-bgc_p-1-dm-id-4">
+                      Send Message
+                    </a>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <div class="map-section">
+            <h2>Our Location</h2>
+            <p>Visit us at:</p>
+            <address>
+                123 Art Lane,<br>
+                Creative District,<br>
+                San Francisco, CA 94103, USA
+            </address>
+
+        <div class="map-container">
+            <iframe clas="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.7956210772886!2d-122.42478862366869!3d37.79482921100383!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580eb03ede865%3A0xffd0607ab0a8064f!2sStudio%20Gallery!5e0!3m2!1sen!2slt!4v1729101956626!5m2!1sen!2slt" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        </div>
+        
     </section>
 
    
