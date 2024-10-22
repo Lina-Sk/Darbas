@@ -114,6 +114,10 @@ section {
     display: block;
 }
 
+.aboutabout{
+  line-height: 25px;
+}
+
 
 .discover {
     display: grid;
@@ -181,7 +185,7 @@ h2 {
     margin: auto;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 10x;
 
 }
 
@@ -209,6 +213,7 @@ h3{
     margin: auto;
     text-align: justify;
     align-content: center;
+    padding: 20px;
 }
 
 .home {
@@ -690,6 +695,8 @@ footer {
       box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.15); 
       border: 1px solid rgba(0, 0, 0, 0.1); 
       left: 300px;
+      z-index: 10;;
+
 }
 
     nav ul {
