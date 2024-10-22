@@ -2,22 +2,27 @@ let slideIndex = 0;
 
 function changeSlide(direction) {
     const gallery = document.querySelector('.gallery');
-    const totalItems = document.querySelectorAll('.gallery-item').length;
-    const itemsPerSlide = 12; 
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const totalItems = galleryItems.length;
+    const itemsPerSlide =  10;
+
     const maxIndex = Math.ceil(totalItems / itemsPerSlide) - 1;
 
     slideIndex += direction;
-
 
     if (slideIndex < 0) {
         slideIndex = maxIndex;
     } else if (slideIndex > maxIndex) {
         slideIndex = 0;
     }
+    
+    const itemWidth = 120; 
+    const offset = -slideIndex * (itemsPerSlide * itemWidth);
 
-    const offset = -slideIndex * (itemsPerSlide * 50); 
     gallery.style.transform = `translateX(${offset}px)`;
 }
+
+
 
 function toggleMenu() {
     const nav = document.querySelector('nav');
